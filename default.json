@@ -14,14 +14,10 @@
   "separateMajorMinor": true,
   "packageRules": [
     {
-      "description": "Wait three days for npm packages to stabilize, except Renovate.",
+      "description": "Exclude packages from minimum relrease age",
       "matchDatasources": ["npm"],
-      "matchPackageNames": [
-        "!renovate",
-        "!@renovatebot/*",
-        "!@containerbase/*"
-      ],
-      "minimumReleaseAge": "3 days"
+      "matchPackageNames": ["renovate", "@renovatebot/*", "@containerbase/*"],
+      "minimumReleaseAge": null
     },
     {
       "description": "Group linter minor and patch updates",
