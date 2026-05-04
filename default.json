@@ -156,7 +156,7 @@
     {
       "description": "Use `build` semantic commit scope for build deps.",
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["@yao-pkg/pkg", "esbuild"],
+      "matchPackageNames": ["@yao-pkg/pkg", "esbuild", "rolldown", "vite"],
       "semanticCommitType": "build"
     },
     {
