@@ -215,6 +215,15 @@
       "matchPackageNames": ["node"],
       "matchDepTypes": ["engines"],
       "rangeStrategy": "widen"
+    },
+    {
+      "description": "disable ubuntu major and minor on prebuild repos",
+      "matchPackageNames": ["ghcr.io/containerbase/ubuntu"],
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["major", "minor"],
+      "matchRepositories": ["containerbase/*-prebuild"],
+      "matchFileNames": ["Dockerfile"],
+      "enabled": false
     }
   ],
   "customManagers": [
