@@ -62,6 +62,12 @@
       "automerge": true
     },
     {
+      "description": "Do not automerge GitHub Action digest updates.",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": false
+    },
+    {
       "description": "Group Prettier packages",
       "matchPackageNames": ["prettier", "@prettier/**", "prettier-plugin-**"],
       "groupName": "prettier packages"
@@ -143,11 +149,6 @@
       "matchPackageNames": ["haskell/cabal"],
       "extractVersion": "^cabal-install-v(?<version>.*)$",
       "versioning": "docker"
-    },
-    {
-      "description": "Use `build` semantic commit scope for lockfile maintenance.",
-      "matchUpdateTypes": ["lockFileMaintenance"],
-      "semanticCommitType": "build"
     },
     {
       "description": "Use `build` semantic commit scope for build deps.",
